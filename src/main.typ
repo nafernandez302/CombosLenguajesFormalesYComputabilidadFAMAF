@@ -1748,7 +1748,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     Además sabemos que $"Halt"^(1,1)$ es $(Sigma union Sigma_p)$-p.r, por lo tanto resulta fácil que $H_i$ es $(Sigma union Sigma_p)$-p.r.
     Entonces por el #teorema_independencia_del_alfabeto, $H_i$ es #sigmaa.pr, lo cual por el #segundo_manantial existen las macros
     $
-      [med "IF" not H_i ("V2, V1, W1") "GOTO A1" med]
+      [med "IF" H_i ("V2, V1, W1") "GOTO A1" med]
     $
     pero para usarlas de forma más intuitiva, las escribimos como
     $
@@ -1758,14 +1758,14 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
       E_i = lambda bold(x) t x_1 alpha_1 [bold(x) != E^(1,1)_(\# med 1) (t, x_1, alpha_1, ~P~_i)] \
       #box(inset: (top: -6pt, bottom: 0pt))[
-        #comentario[(te dice si el programa $~P~_i$ en *$t$ pasos* devuelve $bold(x)$)]
+        #comentario[(te dice si el programa $~P~_i$ en *$t$ pasos* no devuelve $bold(x)$)]
       ]
     $
     Y para $i = 3,4$, definimos
     $
       E_i = lambda t x_1 alpha_1 bold(alpha) [bold(alpha) != E^(1,1)_(* med 1) (t, x_1, alpha_1, ~P~_i)] \
       #box(inset: (top: -6pt, bottom: 0pt))[
-        #comentario[(te dice si el programa $~P~_i$ en *$t$ pasos* devuelve $bold(alpha)$)]
+        #comentario[(te dice si el programa $~P~_i$ en *$t$ pasos* no devuelve $bold(alpha)$)]
       ]
     $
     Notar que los predicados $E_i$ son $sigmaa.mixto$s.
